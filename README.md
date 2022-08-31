@@ -1,3 +1,3 @@
 # Kasa Project
 
-Projet 11
+Passage à une stack Javascript.
