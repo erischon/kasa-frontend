@@ -1,0 +1,56 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+
+  img {
+    width: 145px;
+    height: 47px;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      list-style: none;
+
+      li {
+        &:nth-child(2) {
+          margin-left: 10px;
+        }
+
+        a {
+          font-weight: medium;
+          text-transform: uppercase;
+          font-size: 0.75rem;
+
+          &.active {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: 40px 100px 0 100px;
+
+    img {
+      width: 210px;
+      height: 68px;
+    }
+
+    nav {
+      ul {
+        li {
+          &:nth-child(2) {
+            margin-left: 57px;
+          }
+
+          a {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
