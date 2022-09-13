@@ -5,13 +5,6 @@ const HomePage = () => {
   const [lodgingData, setLodgingData] = useState([]);
 
   const getData = async () => {
-    // const response = await fetch("logements.json", {
-    //   headers: {
-    //     "Content-type": "application/json",
-    //     Accept: "application/json",
-    //   },
-    // });
-
     const response = await axios.get("logements.json");
     const lodging = response.data;
     setLodgingData(lodging);
