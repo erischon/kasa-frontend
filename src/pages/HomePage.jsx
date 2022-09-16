@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import background from "../assets/hero-bg-desktop.png";
+import LodgingCard from "../components/LodgingCard";
 
 const HomePage = () => {
   const [lodgingData, setLodgingData] = useState([]);
@@ -29,12 +30,7 @@ const HomePage = () => {
 
       <section className="lodging__section">
         {lodgingData &&
-          lodgingData.map((lodging) => (
-            <article className="lodging__card">
-              <img src={lodging?.pictures[0]} alt={lodging?.title} />
-              <h2>{lodging?.title}</h2>
-            </article>
-          ))}
+          lodgingData.map((lodging) => <LodgingCard lodging={lodging} />)}
       </section>
     </main>
   );
