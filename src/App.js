@@ -12,12 +12,14 @@ function App() {
       {/* Public */}
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<HomePage />} />
-        <Route path={"location/:id"} element={<DetailPage />} />
+        <Route path={"location/:lodgingId"} element={<DetailPage />} />
         <Route path="/about" element={<AboutPage />} />
       </Route>
 
       {/* Other */}
-      <Route path="*" element={<NotFoundPage />} />
+      <Route path="*" element={<Layout />}>
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
     </Routes>
   );
 }

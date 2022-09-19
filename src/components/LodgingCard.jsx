@@ -5,7 +5,7 @@ const LodgingCard = ({ lodging }) => {
     <div>
       <Link to={`location/${lodging?.id}`}>
         <article className="lodging__card">
-          <img src={lodging?.pictures[0]} alt={lodging?.title} />
+          <img src={lodging?.cover} alt={lodging?.title} />
           <h2>{lodging?.title}</h2>
         </article>
       </Link>

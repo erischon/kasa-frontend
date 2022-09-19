@@ -4,11 +4,13 @@ import axios from "axios";
 import background from "../assets/hero-bg-desktop.png";
 import LodgingCard from "../components/LodgingCard";
 
+const baseUrl = process.env.REACT_APP_API_URL;
+
 const HomePage = () => {
   const [lodgingData, setLodgingData] = useState([]);
 
   const getData = async () => {
-    const response = await axios.get("data/logements.json");
+    const response = await axios.get(baseUrl);
     const lodging = response.data;
     setLodgingData(lodging);
   };
@@ -30,7 +32,9 @@ const HomePage = () => {
 
       <section className="lodging__section">
         {lodgingData &&
-          lodgingData.map((lodging) => <LodgingCard lodging={lodging} />)}
+          lodgingData.map((lodging) => (
+            <LodgingCard lodging={lodging} key={lodging.id} />
+          ))}
       </section>
     </main>
   );
