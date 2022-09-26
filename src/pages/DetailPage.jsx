@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import Carousel from "../components/carousel/Carousel";
 
 const baseUrl = process.env.REACT_APP_API_URL;
 
@@ -23,11 +24,13 @@ const DetailPage = () => {
 
   return (
     <main className="lodgingDetailPage">
-      <section className="lodging-carrousel">
-        {lodgingItem?.pictures &&
-          lodgingItem.pictures.map((picture, i) => (
-            <img src={picture} alt={lodgingItem?.title} key={i} />
-          ))}
+      <section className="lodging-carousel">
+        <Carousel>
+          {lodgingItem?.pictures &&
+            lodgingItem.pictures.map((picture, i) => (
+              <img src={picture} alt={lodgingItem?.title} key={i} />
+            ))}
+        </Carousel>
       </section>
 
       <section className="lodging-infos">
