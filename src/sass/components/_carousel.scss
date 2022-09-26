@@ -41,6 +41,7 @@
   flex-shrink: 0;
   flex-grow: 1;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .left-arrow,
@@ -51,15 +52,17 @@
   transform: translateY(-50%);
   width: 48px;
   height: 48px;
-  border-radius: 24px;
-  background-color: white;
-  border: 1px solid #ddd;
+  background-color: transparent;
+  color: white;
+  border: 0;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .left-arrow {
-  left: 24px;
+  left: 1rem;
 }
 
 .right-arrow {
-  right: 24px;
+  right: 1rem;
 }

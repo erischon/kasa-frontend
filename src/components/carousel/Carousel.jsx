@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
 
 const Carousel = ({ children }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,7 +33,7 @@ const Carousel = ({ children }) => {
       <div className="carousel-wrapper">
         {numberOfFrame > 1 && (
           <button onClick={prev} className="left-arrow">
-            &lt;
+            <AiOutlineLeft />
           </button>
         )}
         <div className="carousel-content-wrapper">
@@ -45,7 +46,7 @@ const Carousel = ({ children }) => {
         </div>
         {numberOfFrame > 1 && (
           <button onClick={next} className="right-arrow">
-            &gt;
+            <AiOutlineRight />
           </button>
         )}
       </div>
