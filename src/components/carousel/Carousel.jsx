@@ -12,11 +12,18 @@ const Carousel = ({ children }) => {
     if (currentIndex < numberOfFrame - 1) {
       setCurrentIndex((prevState) => prevState + 1);
     }
+    if (currentIndex === numberOfFrame - 1) {
+      setCurrentIndex(0);
+    }
   };
 
   const prev = () => {
     if (currentIndex > 0) {
       setCurrentIndex((prevState) => prevState - 1);
+    }
+
+    if (currentIndex === 0) {
+      setCurrentIndex(numberOfFrame - 1);
     }
   };
 
