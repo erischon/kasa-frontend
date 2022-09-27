@@ -1,0 +1,63 @@
+.lodging-infos {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  color: $color-primary;
+
+  &__box1 {
+    margin-bottom: 15px;
+
+    .lodging-infos__title {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .lodging-infos__location {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .lodging-infos__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      .lodging-infos__tag {
+        background-color: $color-primary;
+        color: white;
+        border-radius: 5px;
+        padding: 0.2rem 1.5rem;
+        font-size: 10px;
+      }
+    }
+  }
+
+  &__box2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .lodging-infos__personal {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      width: 135px;
+
+      .lodging-infos__hostName {
+        font-size: 12px;
+        margin-right: 10px;
+      }
+      .lodging-infos__hostImage {
+        width: 32px;
+        height: 32px;
+        border-radius: 90%;
+      }
+    }
+    .lodging-infos__rating {
+    }
+  }
+}

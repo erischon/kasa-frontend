@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import Carousel from "../components/carousel/Carousel";
+import Carousel from "../components/Carousel";
+import LodgingInfos from "../components/LodgingInfos";
 
 const baseUrl = process.env.REACT_APP_API_URL;
 
@@ -33,31 +34,7 @@ const DetailPage = () => {
         </Carousel>
       </section>
 
-      <section className="lodging-infos">
-        <div>
-          <h2 className="lodging-infos__title">{lodgingItem?.title}</h2>
-          <p className="lodging-infos__location">{lodgingItem?.location}</p>
-          <div className="lodging-infos__tags">
-            {lodgingItem.tags &&
-              lodgingItem.tags.map((tag, i) => (
-                <p className="lodging-infos__tag" key={i}>
-                  {tag}
-                </p>
-              ))}
-          </div>
-        </div>
-        <div>
-          <div>
-            <p className="lodging-infos__hostName">{lodgingItem?.host?.name}</p>
-            <img
-              src={lodgingItem?.host?.picture}
-              alt={lodgingItem?.host?.name}
-              className="lodging-infos__hostImage"
-            />
-          </div>
-          <div className="lodging-infos__rating">{lodgingItem?.rating}</div>
-        </div>
-      </section>
+      <LodgingInfos lodgingItem={lodgingItem} />
 
       <section className="lodging-detail">
         <article>{lodgingItem?.description}</article>
