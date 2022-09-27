@@ -5,21 +5,9 @@ const Carousel = ({ children }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [numberOfFrame, setNumberOfFrame] = useState(children?.length);
 
-  //   const [transitionEnabled, setTransitionEnabled] = useState(true);
-
   useEffect(() => {
     setNumberOfFrame(children?.length);
   }, [children]);
-
-  //   const handleTransitionEnd = () => {
-  //     if (currentIndex === 0) {
-  //       setTransitionEnabled(false);
-  //       setCurrentIndex(numberOfFrame);
-  //     } else if (currentIndex === numberOfFrame) {
-  //       setTransitionEnabled(false);
-  //       setCurrentIndex(0);
-  //     }
-  //   };
 
   const next = () => {
     if (currentIndex < numberOfFrame - 1) {
@@ -53,9 +41,7 @@ const Carousel = ({ children }) => {
             className="carousel-content"
             style={{
               transform: `translateX(-${currentIndex * 100}%)`,
-              //   transition: !transitionEnabled ? "none" : undefined,
             }}
-            // onTransitionEnd={() => handleTransitionEnd()}
           >
             {children}
           </div>
