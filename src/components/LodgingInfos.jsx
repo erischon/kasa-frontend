@@ -1,4 +1,5 @@
 import React from "react";
+import StarsRating from "./StarsRating";
 
 const LodgingInfos = ({ lodgingItem }) => {
   return (
@@ -16,7 +17,8 @@ const LodgingInfos = ({ lodgingItem }) => {
         </div>
       </div>
       <div className="lodging-infos__box2">
-        <div className="lodging-infos__rating">{lodgingItem?.rating}</div>
+        <StarsRating rate={lodgingItem?.rating} />
+
         <div className="lodging-infos__personal">
           <p className="lodging-infos__hostName">{lodgingItem?.host?.name}</p>
           <img

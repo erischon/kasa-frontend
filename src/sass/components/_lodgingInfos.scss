@@ -57,7 +57,52 @@
         border-radius: 90%;
       }
     }
-    .lodging-infos__rating {
+  }
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 30px;
+
+    &__box1 {
+      margin-bottom: 0;
+
+      .lodging-infos__title {
+        font-size: 36px;
+      }
+
+      .lodging-infos__location {
+        font-size: 18px;
+      }
+
+      .lodging-infos__tags {
+        margin-top: 1rem;
+
+        .lodging-infos__tag {
+          font-size: 14px;
+          border-radius: 10px;
+          padding: 0.2rem 2rem;
+        }
+      }
+    }
+
+    &__box2 {
+      flex-direction: column-reverse;
+
+      .lodging-infos__personal {
+        width: 167px;
+
+        .lodging-infos__hostName {
+          font-size: 18px;
+          margin-right: 10px;
+        }
+        .lodging-infos__hostImage {
+          width: 64px;
+          height: 64px;
+          border-radius: 90%;
+        }
+      }
     }
   }
 }

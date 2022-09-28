@@ -1,0 +1,11 @@
+.lodging-infos__rating {
+  i {
+    margin-right: 0.25rem;
+
+    font-size: 15px;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 30px;
+    }
+  }
+}
