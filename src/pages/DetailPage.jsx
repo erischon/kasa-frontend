@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import Carousel from "../components/Carousel";
+import Collapse from "../components/Collapse";
 import LodgingInfos from "../components/LodgingInfos";
 
 const baseUrl = process.env.REACT_APP_API_URL;
@@ -37,13 +38,16 @@ const DetailPage = () => {
       <LodgingInfos lodgingItem={lodgingItem} />
 
       <section className="lodging-detail">
-        <article>{lodgingItem?.description}</article>
-        <article>
+        <Collapse name={"Description"} isOpen={false}>
+          {lodgingItem?.description}
+        </Collapse>
+
+        <Collapse name={"Equipements"} isOpen={false}>
           {lodgingItem.equipments &&
             lodgingItem.equipments.map((equipment, i) => (
               <p key={i}>{equipment}</p>
             ))}
-        </article>
+        </Collapse>
       </section>
     </main>
   );

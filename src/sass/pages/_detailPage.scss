@@ -1,0 +1,11 @@
+.lodging-detail {
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    gap: 90px;
+  }
+}

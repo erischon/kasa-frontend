@@ -17,12 +17,10 @@ const StarsRating = ({ rate }) => {
     return starsRatingHtml;
   };
 
-  console.log("======", starRateHtml());
-
   return (
     <div
       className="lodging-infos__rating"
-      dangerouslySetInnerHTML={{ __html: starsRatingHtml }}
+      dangerouslySetInnerHTML={{ __html: starRateHtml() }}
     ></div>
   );
 };
