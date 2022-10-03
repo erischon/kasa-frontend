@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { useNavigate } from "react-router";
+
 import Carousel from "../components/Carousel";
 import Collapse from "../components/Collapse";
 import LodgingInfos from "../components/LodgingInfos";
@@ -11,12 +13,18 @@ const DetailPage = () => {
   const [lodgingItem, setLodgingItem] = useState([]);
   const params = useParams();
   const { lodgingId } = params;
+  const navigate = useNavigate();
 
   const getData = async () => {
     const response = await axios.get(baseUrl);
     const allLodgingData = response.data;
 
     const lodging = allLodgingData.find((lodging) => lodging.id === lodgingId);
+
+    if (lodging === undefined) {
+      navigate("/notfound");
+    }
+
     setLodgingItem(lodging);
   };
 
