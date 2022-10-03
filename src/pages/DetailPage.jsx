@@ -22,7 +22,7 @@ const DetailPage = () => {
     const lodging = allLodgingData.find((lodging) => lodging.id === lodgingId);
 
     if (lodging === undefined) {
-      navigate("/notfound");
+      navigate("*");
     }
 
     setLodgingItem(lodging);
