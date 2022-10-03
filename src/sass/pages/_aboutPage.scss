@@ -1,0 +1,22 @@
+.hero__section.about {
+  height: 223px;
+
+  margin-bottom: 20px;
+
+  &:before {
+    height: 223px;
+  }
+}
+
+.about-page__collapses {
+  max-width: 1024px;
+  margin: auto;
+
+  .collapse {
+    &__content {
+      @media screen and (min-width: 1024px) {
+        min-height: 100px;
+      }
+    }
+  }
+}

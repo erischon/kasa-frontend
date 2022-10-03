@@ -1,6 +1,4 @@
 .collapse {
-  //   position: relative;
-
   margin-top: 16px;
   margin-bottom: 20px;
 
@@ -59,8 +57,8 @@
   }
 
   &__content {
-    padding-top: 20px;
-    padding-bottom: 0.3rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
     padding-right: 10px;
     padding-left: 10px;
 
@@ -72,8 +70,8 @@
     z-index: 1;
 
     @media screen and (min-width: 1024px) {
-      padding-top: 35px;
-      padding-bottom: 27px;
+      padding-top: 30px;
+      padding-bottom: 30px;
       padding-right: 20px;
       padding-left: 20px;
 

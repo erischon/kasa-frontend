@@ -20,7 +20,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <main>
+    <main className="home-page">
       <section
         className="hero__section"
         style={{ backgroundImage: `url(${background})` }}
