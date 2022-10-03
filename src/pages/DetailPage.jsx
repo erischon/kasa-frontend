@@ -30,7 +30,7 @@ const DetailPage = () => {
 
   useEffect(() => {
     getData();
-  }, []);
+  });
 
   return (
     <main className="lodgingDetailPage">
