@@ -10,14 +10,14 @@ import NotFoundPage from "./pages/NotFoundPage";
 function App() {
   return (
     <Routes>
-      {/* Public */}
+      {/* Public Routes */}
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<HomePage />} />
         <Route path={"location/:lodgingId"} element={<DetailPage />} />
         <Route path="/about" element={<AboutPage />} />
       </Route>
 
-      {/* Other */}
+      {/* Other Routes */}
       <Route path="*" element={<LayoutLight />}>
         <Route path="*" element={<NotFoundPage />} />
       </Route>
