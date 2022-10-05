@@ -1,3 +1,8 @@
+/**
+ *
+ * @param {*} param0
+ * @returns
+ */
 const StarsRating = ({ rate }) => {
   let starsRatingHtml = "";
   let increment = 0;
