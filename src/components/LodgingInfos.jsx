@@ -1,4 +1,3 @@
-import React from "react";
 import StarsRating from "./StarsRating";
 
 const LodgingInfos = ({ lodgingItem }) => {
