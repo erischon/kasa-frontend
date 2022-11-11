@@ -12,7 +12,7 @@ function App() {
     <Routes>
       {/* Public Routes */}
       <Route path="/" element={<Layout />}>
-        <Route path="/" element={<HomePage />} />
+        <Route index element={<HomePage />} />
         <Route path={"location/:lodgingId"} element={<DetailPage />} />
         <Route path="/about" element={<AboutPage />} />
       </Route>
