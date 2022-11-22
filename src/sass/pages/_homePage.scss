@@ -92,6 +92,10 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
+
+    padding: 50px;
+    background-color: #f6f6f6;
+    border-radius: 25px;
   }
 }
 

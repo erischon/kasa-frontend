@@ -36,6 +36,7 @@ const Carousel = ({ children }) => {
             <AiOutlineLeft />
           </button>
         )}
+
         <div className="carousel-content-wrapper">
           <div
             className="carousel-content"
@@ -46,6 +47,13 @@ const Carousel = ({ children }) => {
             {children}
           </div>
         </div>
+
+        {numberOfFrame > 1 && (
+          <span className="image-number">{`${
+            currentIndex + 1
+          }/${numberOfFrame}`}</span>
+        )}
+
         {numberOfFrame > 1 && (
           <button onClick={next} className="right-arrow">
             <AiOutlineRight />
